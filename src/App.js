@@ -1,14 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
+
 import HomeView from './views/home';
+import NavBar from './components/Nav';
+
+import Theme from './common/Theme';
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Route exact path="/" component={HomeView} />
+        <Theme>
+          <Route exact path="/" component={HomeView} />
+          <Route exact path="/" component={NavBar} />
+        </Theme>
       </div>
     </BrowserRouter>
   );
