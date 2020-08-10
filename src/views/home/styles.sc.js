@@ -1,15 +1,28 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export const homeView = styled.div`
-  background: url(${(props) => props.imgUrl});
-  background-size: contain;
-  height: 100vh;
+  height: 9000px;
   width: 100vw;
-  position: fixed;
+  overflow: scroll;
+  position: relative;
+  color: white;
+  color: ${(props) => props.theme.colors.persianGreen};
+  background: magenta;
+`;
+
+export const topSection = styled.div`
+  background: url(${(props) => props.imgUrl}) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 791px;
+  width: 100%;
+  position: relative;
   top: 0;
   left: 0;
   color: white;
-  padding-top: 300px;
   color: ${(props) => props.theme.colors.persianGreen};
 `;
 
@@ -19,12 +32,16 @@ export const headLine = styled.h1`
   color: #fff;
   text-align: left;
   margin: 0 10px;
+  top: 0;
 `;
 
-export const subHeadline = styled.h1`
+export const subHeadline = styled(animated.h1)`
   font-family: 'Cunia';
   font-size: 40px;
   color: #fff;
   text-align: left;
   margin: 0 5px;
+  display: ${(props) => (props.fade === '0' ? 'none' : 'inline')};
+  /* transition: opacity 0.5s; */
+  /* opacity: 1; */
 `;

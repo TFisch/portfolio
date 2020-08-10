@@ -8,6 +8,7 @@ export const navBarContainer = styled.div`
   align-items: center;
   position: fixed;
   z-index: 111;
+  top: 0;
 `;
 
 export const navContentsWrapper = styled.div`
