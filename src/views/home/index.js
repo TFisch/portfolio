@@ -6,15 +6,20 @@ const HomeView = () => {
   const ref = useRef();
   const [isVisible, setVisible] = useState(true);
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }));
+  const { opacity } = useSpring({ opacity: isVisible ? 0 : 1 });
 
   const calc = (o) => {
-    if (o < 1004) {
-      return `translateY(${o * 0.08}vh)`;
-    } else {
-      // this won't work b/c im trying to useState in a Fn
-      setVisible(false);
-      return `translateY(${1012 * 0.08}vh)`;
+    if (isVisible === true) {
+      if (o < 922) {
+        return `translateY(${o * 0.08}vh)`;
+      } else if (o >= 922 && o < 945) {
+        return `translateY(${922 * 0.08}vh)`;
+      } else {
+        setVisible(false);
+        return `translateY(${922 * 0.08}vh)`;
+      }
     }
+    return `translateY(${922 * 0.08}vh)`;
   };
 
   const handleScroll = () => {
@@ -33,7 +38,11 @@ const HomeView = () => {
   });
 
   return (
-    <Styles.homeView ref={ref} className="home-view">
+    <Styles.homeView
+      ref={ref}
+      className="home-view"
+      imgUrl={process.env.PUBLIC_URL + '/bogomil.jpg'}
+    >
       <Styles.topSection
         className="top-content-container"
         imgUrl={process.env.PUBLIC_URL + '/bogomil.jpg'}
@@ -51,9 +60,10 @@ const HomeView = () => {
       >
         <Styles.headLine>Well,</Styles.headLine>
       </animated.div>
-      {/* Trying to fade this component when above animated.div is right above it */}
-      <Styles.subHeadline fade={isVisible}>Hello There!</Styles.subHeadline>
-      {/***************************************/}
+      <Styles.midSection>
+        <Styles.subHeadline style={{ opacity }}>Hello</Styles.subHeadline>
+        <Styles.subHeadline style={{ opacity }}>There!</Styles.subHeadline>
+      </Styles.midSection>
     </Styles.homeView>
   );
 };
