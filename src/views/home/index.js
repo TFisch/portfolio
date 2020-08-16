@@ -9,17 +9,18 @@ const HomeView = () => {
   const { opacity } = useSpring({ opacity: isVisible ? 0 : 1 });
 
   const calc = (o) => {
+    console.log(o);
     if (isVisible === true) {
-      if (o < 922) {
+      if (o < 516) {
         return `translateY(${o * 0.08}vh)`;
-      } else if (o >= 922 && o < 945) {
-        return `translateY(${922 * 0.08}vh)`;
+      } else if (o >= 516 && o < 530) {
+        return `translateY(${516 * 0.08}vh)`;
       } else {
         setVisible(false);
-        return `translateY(${922 * 0.08}vh)`;
+        return `translateY(${516 * 0.08}vh)`;
       }
     }
-    return `translateY(${922 * 0.08}vh)`;
+    return `translateY(${516 * 0.08}vh)`;
   };
 
   const handleScroll = () => {
@@ -46,7 +47,12 @@ const HomeView = () => {
       <Styles.topSection
         className="top-content-container"
         imgUrl={process.env.PUBLIC_URL + '/bogomil.jpg'}
-      ></Styles.topSection>
+      >
+        <Styles.subHeadline style={{ opacity }} bottom="57px">
+          Hello There!
+        </Styles.subHeadline>
+        {/* <Styles.subHeadline style={{ opacity }}>There!</Styles.subHeadline> */}
+      </Styles.topSection>
       <animated.div
         className="well-anim"
         style={{
@@ -54,16 +60,13 @@ const HomeView = () => {
           height: '500px',
           transform: offset.interpolate(calc),
           zIndex: 300,
-          top: '340px',
+          top: '180px',
           position: 'absolute'
         }}
       >
         <Styles.headLine>Well,</Styles.headLine>
       </animated.div>
-      <Styles.midSection>
-        <Styles.subHeadline style={{ opacity }}>Hello</Styles.subHeadline>
-        <Styles.subHeadline style={{ opacity }}>There!</Styles.subHeadline>
-      </Styles.midSection>
+      <Styles.midSection></Styles.midSection>
     </Styles.homeView>
   );
 };

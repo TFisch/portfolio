@@ -6,8 +6,8 @@ export const homeView = styled.div`
   width: 100vw;
   overflow: scroll;
   position: relative;
-  color: white;
-  background: url(${(props) => props.imgUrl}) no-repeat center center fixed;
+  color: black;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,17 +15,17 @@ export const homeView = styled.div`
 `;
 
 export const topSection = styled.div`
-  background: url(${(props) => props.imgUrl}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 791px;
+  height: 800px;
   width: 100%;
   position: relative;
+  background: white;
   top: 0;
   left: 0;
-  color: white;
+  color: black;
   color: ${(props) => props.theme.colors.persianGreen};
 `;
 
@@ -39,9 +39,9 @@ export const midSection = styled.div`
 `;
 
 export const headLine = styled.h1`
-  font-family: 'Cunia';
+  font-family: 'Montreal Bold Italic';
   font-size: 78px;
-  color: #fff;
+  color: #000;
   text-align: left;
   margin: 0 10px;
   top: 0;
@@ -50,12 +50,15 @@ export const headLine = styled.h1`
 
 export const subHeadline = styled(animated.h2)`
   display: 'block';
-  font-family: 'Cunia';
+  font-family: 'Montreal Bold Italic';
   font-size: 70px;
-  color: #fff;
+  color: #000;
   text-align: center;
   margin: 0 5px;
   line-height: 0.8;
+  position: absolute;
+  bottom: 227px;
+  margin-left: 14px;
   /* transition: opacity 0.5s; */
   /* opacity: 1; */
 `;
