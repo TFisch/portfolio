@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
-export const homeView = styled.div`
+export const homeView = styled(animated.div)`
   height: 9000px;
   width: 100vw;
   overflow: scroll;
   position: relative;
   color: black;
-  background: white;
+  background: url(${(props) => props.imgUrl}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+`;
+
+export const scrollableTop = styled(animated.div)`
+  width: 100%;
+  height: 500px;
+  background: white;
 `;
 
 export const topSection = styled.div`
@@ -19,14 +25,17 @@ export const topSection = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  height: 388px;
   width: 100%;
-  position: relative;
+  position: absolute;
+  margin-top: 500px;
   background: white;
-  top: 0;
+  top: 416px;
   left: 0;
   color: black;
-  color: ${(props) => props.theme.colors.persianGreen};
+  display: flex;
+  align-items: flex-end;
+  margin-top: 50vh;
 `;
 
 export const midSection = styled.div`
@@ -46,6 +55,7 @@ export const headLine = styled.h1`
   margin: 0 10px;
   top: 0;
   margin-left: 14px;
+  text-shadow: 2px 2px white;
 `;
 
 export const subHeadline = styled(animated.h2)`
@@ -61,4 +71,21 @@ export const subHeadline = styled(animated.h2)`
   margin-left: 14px;
   /* transition: opacity 0.5s; */
   /* opacity: 1; */
+`;
+
+export const summary = styled.p`
+  text-align: left;
+  font-family: 'Montreal Light';
+  font-size: 25px;
+  margin: 1em 1em 3em;
+  color: #000;
+`;
+
+export const bioTab = styled.div`
+  background: white;
+  height: 50px;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  margin-top: 1200px;
 `;
