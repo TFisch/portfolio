@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
-export const projectsView = styled.div`
-  height: 9000px;
-  width: 100vw;
-  overflow: scroll;
-  position: relative;
-  color: black;
+export const ProjectView = styled.div`
   background: url(${(props) => props.imgurl}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+`;
+
+export const SliderWrapper = styled.div`
+  width: 300px;
+  height: 300px;
+  border: solid pink 1px;
+  margin: auto;
 `;
 
 export const headLine = styled.h1`
@@ -22,11 +24,4 @@ export const headLine = styled.h1`
   margin-left: 14px;
   text-shadow: 4px 4px black;
   text-decoration: underline;
-`;
-
-export const projectsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 600px;
 `;

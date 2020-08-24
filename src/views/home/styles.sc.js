@@ -7,7 +7,7 @@ export const homeView = styled(animated.div)`
   overflow: scroll;
   position: relative;
   color: black;
-  background: url(${(props) => props.imgUrl}) no-repeat center center fixed;
+  background: url(${(props) => props.imgurl}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,11 +81,22 @@ export const summary = styled.p`
   color: #000;
 `;
 
-export const bioTab = styled.div`
+export const linkTab = styled.div`
   background: white;
   height: 50px;
   margin: auto;
-  width: 200px;
+  width: 240px;
   text-align: center;
-  margin-top: 1200px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 1200px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-family: 'Montreal Bold Italic';
+  z-index: 99999;
 `;
+
+export const tabCopy = styled.p``;

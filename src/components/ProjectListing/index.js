@@ -2,17 +2,9 @@ import React from 'react';
 import * as Styles from './styles.sc';
 import { Link } from 'react-router-dom';
 
-const ProjectListing = ({ imgurl, projectTitle, projectData }) => {
-  console.log('proData', projectData);
+const ProjectListing = ({ imgurl, projectTitle, link }) => {
   return (
-    <Link
-      to={{
-        pathname: 'projects/' + projectData.href,
-        state: {
-          projectData
-        }
-      }}
-    >
+    <Link to={`/projects/${link}`}>
       <Styles.projectListing imgurl={process.env.PUBLIC_URL + imgurl}>
         <Styles.projectBanner>
           <Styles.bannerCopy>{projectTitle}</Styles.bannerCopy>

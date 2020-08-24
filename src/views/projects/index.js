@@ -2,16 +2,6 @@ import React from 'react';
 import * as Styles from './styles.sc';
 import ProjectListing from '../../components/ProjectListing';
 
-const barefootData = {
-  href: 'barefoot-uploader',
-  title: 'Barefoot Uploader'
-};
-
-const gooseData = {
-  href: 'goose-island',
-  title: 'Goose Island Web Redesign'
-};
-
 const ProjectsView = () => {
   return (
     <Styles.projectsView
@@ -22,13 +12,13 @@ const ProjectsView = () => {
       <Styles.projectsWrapper>
         <ProjectListing
           imgurl="/barefoot_top.jpg"
-          projectData={barefootData}
           projectTitle="Barefoot Uploader"
+          link="barefoot-uploader"
         />
         <ProjectListing
           imgurl="/goose_preview.jpg"
-          projectData={gooseData}
           projectTitle="Goose Island Web Redesign"
+          link="goose-redesign"
         />
       </Styles.projectsWrapper>
     </Styles.projectsView>

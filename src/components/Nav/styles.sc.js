@@ -7,7 +7,7 @@ export const navBarContainer = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  z-index: 111;
+  z-index: 9999;
   top: 0;
 `;
 
