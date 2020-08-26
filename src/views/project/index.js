@@ -22,20 +22,29 @@ const project = (props) => {
 
   return (
     <styles.ProjectView imgurl={process.env.PUBLIC_URL + '/bogomil.jpg'}>
-      <styles.headLine> {props.projectData.title}</styles.headLine>
       <styles.SliderWrapper>
         <Slider {...settings}>
-          <img src="http://placekitten.com/300/300" />
+          <img src="http://placekitten.com/350/300" />
 
-          <img src="http://placekitten.com/300/300" />
+          <img src="http://placekitten.com/350/300" />
 
-          <img src="http://placekitten.com/300/300" />
+          <img src="http://placekitten.com/350/300" />
 
-          <img src="http://placekitten.com/300/300" />
+          <img src="http://placekitten.com/350/300" />
         </Slider>
       </styles.SliderWrapper>
-      <h2>Overview</h2>
-      <p>Here's a summary of the project</p>
+      <styles.ProjectContentWrapper>
+        <styles.headLine> {props.projectData.title}</styles.headLine>
+        <styles.overviewCopy>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </styles.overviewCopy>
+      </styles.ProjectContentWrapper>
       <h2>Tech Stack</h2>
       <ul>
         <li>one</li>

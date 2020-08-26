@@ -25,6 +25,22 @@
     format('truetype');
 }
 
+p {
+  font-family: 'Montreal Light';
+}
+
+@media only screen and (min-width: 400px) {
+  p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 525px) {
+  p {
+    font-size: 1.5em;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -387,4 +403,17 @@ template {
 
 [hidden] {
   display: none;
+}
+
+/**
+ * React-Slick Overwrite
+ */
+
+.slick-next {
+  right: 3px !important;
+}
+
+.slick-prev {
+  left: 4px !important;
+  z-index: 999 !important;
 }

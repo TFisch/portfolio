@@ -6,6 +6,7 @@ export const ProjectView = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 20px;
 `;
 
 export const SliderWrapper = styled.div`
@@ -16,12 +17,23 @@ export const SliderWrapper = styled.div`
 `;
 
 export const headLine = styled.h1`
-  font-family: 'Montreal Light Italic';
+  font-family: 'Montreal Bold Italic';
   /* font-size: 50px; */
-  color: #fff;
+  color: #000;
   text-align: left;
-  margin: 0 10px;
-  margin-left: 14px;
-  text-shadow: 4px 4px black;
-  text-decoration: underline;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0;
+  /* text-shadow: 2px 1px #0f2130; */
+`;
+
+export const overviewCopy = styled.p`
+  background: #fff;
+  margin: 0 0.5rem;
+  line-height: 1.25;
+`;
+
+export const ProjectContentWrapper = styled.div`
+  background: #fff;
+  height: auto;
+  width: 100%;
 `;
