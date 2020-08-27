@@ -5,6 +5,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import * as styles from './styles.sc';
+import Tag from '../../components/Tag';
+
 const project = (props) => {
   const handleDragStart = () => {
     console.log('start drag');
@@ -46,11 +48,7 @@ const project = (props) => {
         </styles.overviewCopy>
       </styles.ProjectContentWrapper>
       <h2>Tech Stack</h2>
-      <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-      </ul>
+      <Tag tagName="React" />
     </styles.ProjectView>
   );
 };
