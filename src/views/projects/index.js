@@ -6,7 +6,7 @@ const ProjectsView = () => {
   return (
     <Styles.projectsView
       className="projects-view"
-      imgurl={process.env.PUBLIC_URL + '/bagacian.jpg'}
+      imgurl={process.env.PUBLIC_URL + '/bogomil.jpg'}
     >
       <Styles.headLine>PROJECTS</Styles.headLine>
       <Styles.projectsWrapper>

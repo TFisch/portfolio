@@ -417,3 +417,8 @@ template {
   left: 4px !important;
   z-index: 999 !important;
 }
+
+.slick-slide div img {
+  max-width: 100%;
+  border-radius: 5px;
+}

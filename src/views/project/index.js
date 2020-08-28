@@ -19,20 +19,17 @@ const project = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    arrows: false
   };
 
   return (
     <styles.ProjectView imgurl={process.env.PUBLIC_URL + '/bogomil.jpg'}>
-      <styles.SliderWrapper>
-        <Slider {...settings}>
-          <img src="http://placekitten.com/350/300" />
-
-          <img src="http://placekitten.com/350/300" />
-
-          <img src="http://placekitten.com/350/300" />
-
-          <img src="http://placekitten.com/350/300" />
+      <styles.SliderWrapper className="slider-wrapper">
+        <Slider {...settings} className="slider">
+          <CarouselImage
+            imgurl={process.env.PUBLIC_URL + '/barefoot_main.jpg'}
+          />
         </Slider>
       </styles.SliderWrapper>
       <styles.ProjectContentWrapper>
@@ -47,7 +44,6 @@ const project = (props) => {
           culpa qui officia deserunt mollit anim id est laborum.
         </styles.overviewCopy>
       </styles.ProjectContentWrapper>
-      <h2>Tech Stack</h2>
       <Tag tagName="React" />
     </styles.ProjectView>
   );

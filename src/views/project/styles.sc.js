@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 
 export const ProjectView = styled.div`
-  background: url(${(props) => props.imgurl}) no-repeat center center fixed;
+  /* background: url(${(props) => props.imgurl}) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
+  background-color: white;
   padding-top: 20px;
 `;
 
 export const SliderWrapper = styled.div`
-  width: 300px;
-  height: 300px;
-  border: solid pink 1px;
+  width: 100%;
+  height: auto;
   margin: auto;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 `;
 
 export const headLine = styled.h1`
