@@ -7,11 +7,6 @@ export const homeView = styled(animated.div)`
   overflow: scroll;
   position: relative;
   color: black;
-  background: url(${(props) => props.imgurl}) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 `;
 
 export const scrollableTop = styled(animated.div)`
@@ -48,37 +43,23 @@ export const midSection = styled.div`
 `;
 
 export const headLine = styled.h1`
-  font-family: 'Montreal Bold Italic';
-  font-size: 78px;
-  color: #000;
+  font-size: 50px;
+  color: white;
   text-align: left;
   margin: 0 10px;
-  top: 0;
   margin-left: 14px;
-  text-shadow: 2px 2px white;
-`;
-
-export const subHeadline = styled(animated.h2)`
-  display: 'block';
-  font-family: 'Montreal Bold Italic';
-  font-size: 70px;
-  color: #000;
-  text-align: center;
-  margin: 0 5px;
-  line-height: 0.8;
-  position: absolute;
-  bottom: 227px;
-  margin-left: 14px;
-  /* transition: opacity 0.5s; */
-  /* opacity: 1; */
+  line-height: ${(props) => (props.lineHeight ? props.lineHeight : 'normal')};
+  font-family: ${(props) => (props.italic ? 'Tex Italic' : 'Tex Bold')};
 `;
 
 export const summary = styled.p`
   text-align: left;
   font-family: 'Montreal Light';
-  font-size: 25px;
-  margin: 1em 1em 3em;
+  background: white;
+  font-size: 20px;
   color: #000;
+  padding: 20px 10px;
+  margin-top: 100px;
 `;
 
 export const linkTab = styled.div`

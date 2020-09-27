@@ -25,6 +25,25 @@
     format('truetype');
 }
 
+@font-face {
+  font-family: 'Tex Regular';
+  src: url('./assets/fonts/Tex/texgyreheros-regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tex Bold';
+  src: url('./assets/fonts/Tex/texgyreheros-bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tex Italic';
+  src: url('./assets/fonts/Tex/texgyreheros-italic.otf') format('truetype');
+}
+
+h1 {
+  font-family: 'Tex Italic';
+}
+
 p {
   font-family: 'Montreal Light';
 }
