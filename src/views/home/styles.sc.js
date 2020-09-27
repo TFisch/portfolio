@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 export const homeView = styled(animated.div)`
-  height: 9000px;
+  height: auto;
   width: 100vw;
   overflow: scroll;
   position: relative;
@@ -46,38 +46,19 @@ export const headLine = styled.h1`
   font-size: 50px;
   color: white;
   text-align: left;
-  margin: 0 10px;
-  margin-left: 14px;
+  margin: ${(props) => (props.margin ? props.margin : '0 10px')};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : 'normal')};
   font-family: ${(props) => (props.italic ? 'Tex Italic' : 'Tex Bold')};
+  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : '0')};
 `;
 
 export const summary = styled.p`
   text-align: left;
   font-family: 'Montreal Light';
-  background: white;
   font-size: 20px;
-  color: #000;
-  padding: 20px 10px;
-  margin-top: 100px;
+  color: white;
+  position: ${(props) => (props.position ? props.position : 'relative')};
+  padding: ${(props) => (props.padding ? props.padding : '20px 10px')};
+  margin-top: ${(props) => (props.marginTop ? props.marginTop : '0')};
+  line-height: 1.3;
 `;
-
-export const linkTab = styled.div`
-  background: white;
-  height: 50px;
-  margin: auto;
-  width: 240px;
-  text-align: center;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  top: 1200px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  font-family: 'Montreal Bold Italic';
-  z-index: 99999;
-`;
-
-export const tabCopy = styled.p``;
