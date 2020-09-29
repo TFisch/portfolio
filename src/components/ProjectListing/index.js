@@ -1,16 +1,20 @@
 import React from 'react';
-import * as Styles from './styles.sc';
+import * as styles from './styles.sc';
 import { Link } from 'react-router-dom';
 
-const ProjectListing = ({ imgurl, projectTitle, link }) => {
+const ProjectListing = ({ imgurl, projectTitle, link, className }) => {
   return (
-    <Link to={`/projects/${link}`}>
-      <Styles.projectListing imgurl={process.env.PUBLIC_URL + imgurl}>
-        <Styles.projectBanner>
-          <Styles.bannerCopy>{projectTitle}</Styles.bannerCopy>
-        </Styles.projectBanner>
-      </Styles.projectListing>
-    </Link>
+    <styles.ListingContainer className={className}>
+      <Link to={`/projects/${link}`} style={{ textDecoration: 'none' }}>
+        <styles.ProjectListing
+          className="project-listing"
+          imgurl={process.env.PUBLIC_URL + imgurl}
+        />
+        <styles.BannerCopy className="banner-copy">
+          {projectTitle}
+        </styles.BannerCopy>
+      </Link>
+    </styles.ListingContainer>
   );
 };
 

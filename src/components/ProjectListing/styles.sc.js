@@ -1,32 +1,67 @@
 import styled from 'styled-components';
 
-export const projectListing = styled.div`
-  height: 250px;
-  width: 400px;
+export const ListingContainer = styled.div`
+  position: relative;
+  height: 400px;
+  width: 100%;
+  justify-self: center;
+  @media (min-width: 400px) {
+    width: 400px;
+  }
+
+  @media (min-width: 635px) {
+    width: 200px;
+    &:nth-child(1) {
+      height: 350px;
+    }
+    &:nth-child(2) {
+      height: 300px;
+    }
+    &:nth-child(3) {
+      height: 350px;
+    }
+    &:nth-child(4) {
+      height: 300px;
+      align-self: center;
+    }
+    &:nth-child(5) {
+      height: 350px;
+      align-self: start;
+    }
+    &:nth-child(6) {
+      height: 300px;
+    }
+  }
+`;
+
+export const ProjectListing = styled.div`
+  height: 100%;
+  width: 100%;
   border: solid white 1px;
   margin: auto;
-  background: url(${(props) => props.imgurl});
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: center;
   display: flex;
   align-items: flex-end;
-  border-radius: 8px;
+  position: relative;
+  &::before {
+    background: url(${(props) => props.imgurl});
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.7;
+    content: '';
+  }
 `;
 
-export const projectBanner = styled.div`
-  height: 50px;
-  border-top: solid black 1px;
-  background: white;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-`;
-
-export const bannerCopy = styled.h2`
-  font-family: 'Montreal Bold Italic';
-  font-size: 25px;
+export const BannerCopy = styled.h2`
+  font-family: 'Tex Bold';
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
 `;

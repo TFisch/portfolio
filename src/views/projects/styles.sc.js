@@ -1,32 +1,27 @@
 import styled from 'styled-components';
 
 export const projectsView = styled.div`
-  height: 9000px;
+  height: auto;
   width: 100vw;
   overflow: scroll;
   position: relative;
   color: black;
-  background: url(${(props) => props.imgurl}) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 `;
 
 export const headLine = styled.h1`
-  font-family: 'Montreal Light Italic';
-  /* font-size: 50px; */
   color: #fff;
   text-align: left;
   margin: 0 10px;
   margin-left: 14px;
-  text-shadow: 4px 4px black;
-  text-decoration: underline;
 `;
 
 export const projectsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 600px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 15px;
+  height: auto;
+  @media (min-width: 635px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+  }
 `;
