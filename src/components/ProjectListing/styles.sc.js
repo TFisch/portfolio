@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const ListingContainer = styled.div`
   position: relative;
@@ -11,25 +12,24 @@ export const ListingContainer = styled.div`
 
   @media (min-width: 635px) {
     width: 200px;
+
     &:nth-child(1) {
-      height: 350px;
+      height: 100%;
     }
     &:nth-child(2) {
-      height: 300px;
+      height: 100%;
     }
     &:nth-child(3) {
-      height: 350px;
+      height: 100%;
     }
     &:nth-child(4) {
-      height: 300px;
-      align-self: center;
+      height: 100%;
     }
     &:nth-child(5) {
-      height: 350px;
-      align-self: start;
+      height: 100%;
     }
     &:nth-child(6) {
-      height: 300px;
+      height: 100%;
     }
   }
 `;

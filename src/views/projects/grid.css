@@ -1,29 +1,30 @@
-.proj-one {
-  grid-column: 1;
-  grid-row: 1/3;
-}
+@media screen and (min-width: 635px) {
+  .proj-one {
+    grid-column: 1;
+    grid-row: 1/4;
+  }
+  .proj-two {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
 
-.proj-two {
-  grid-column: 2;
-  grid-row: 1/2;
-}
+  .proj-three {
+    grid-column: 3;
+    grid-row: 1/4;
+  }
 
-.proj-three {
-  grid-column: 3;
-  grid-row: 1/3;
-}
+  .proj-four {
+    grid-column: 1;
+    grid-row: 4/6;
+  }
 
-.proj-four {
-  grid-column: 1;
-  grid-row: 4/7;
-}
+  .proj-five {
+    grid-column: 2;
+    grid-row: 3/6;
+  }
 
-.proj-five {
-  grid-column: 2;
-  grid-row: 4/6;
-}
-
-.proj-six {
-  grid-column: 3;
-  grid-row: 4/7;
+  .proj-six {
+    grid-column: 3;
+    grid-row: 4/6;
+  }
 }

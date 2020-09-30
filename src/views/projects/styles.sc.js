@@ -17,10 +17,12 @@ export const headLine = styled.h1`
 
 export const projectsWrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 15px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   height: auto;
+  row-gap: 15px;
   @media (min-width: 635px) {
+    max-width: 650px;
+    margin: auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
   }
