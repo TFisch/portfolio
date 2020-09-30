@@ -5,6 +5,7 @@ import { animated, useSpring, useTransition } from 'react-spring';
 import HomeView from './views/home';
 import ProjectsView from './views/projects';
 import NavBar from './components/Nav';
+import Biography from './views/biography';
 
 import Theme from './common/Theme';
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
       <Switch location={location}>
         <Route path="/" exact component={HomeView} />
         <Route path="/projects" exact component={ProjectsView} />
+        <Route path="/aboutme" exact component={Biography} />
         <Route
           path="/projects/barefoot-uploader"
           render={(props) => (
