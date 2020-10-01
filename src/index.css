@@ -42,16 +42,21 @@
 
 h1 {
   font-family: 'Tex Italic';
+  margin: 0 10px;
 }
 
 p {
   font-family: 'Montreal Light';
+  text-align: left;
+  font-size: 1.25rem;
+  position: relative;
+  padding: 20px 10px;
 }
 
 @media only screen and (min-width: 400px) {
-  p {
+  /* p {
     font-size: 1em;
-  }
+  } */
 }
 
 @media only screen and (min-width: 525px) {

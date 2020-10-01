@@ -6,7 +6,6 @@ export const homeView = styled(animated.div)`
   width: 100vw;
   overflow: scroll;
   position: relative;
-  color: black;
 `;
 
 export const scrollableTop = styled(animated.div)`
@@ -55,7 +54,6 @@ export const headLine = styled.h1`
 export const summary = styled.p`
   text-align: left;
   font-family: 'Montreal Light';
-  font-size: 20px;
   color: white;
   position: ${(props) => (props.position ? props.position : 'relative')};
   padding: ${(props) => (props.padding ? props.padding : '20px 10px')};

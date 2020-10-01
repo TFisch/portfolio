@@ -22,7 +22,7 @@ const HomeView = () => {
         In the two years I've been working as a developer I've been extremely
         privileged to work on a wide variety of projects with some incredible
         individuals.
-        <LinkTab href="/projects" text="Learn More" />
+        <LinkTab href="/aboutme" text="Learn More" />
       </Styles.summary>
       <Styles.headLine margin="140px 10px 0px 10px" lineHeight="1">
         What I've Worked On
