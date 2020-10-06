@@ -25,6 +25,14 @@ export const BoldParagraph = styled.p`
   padding-bottom: 0;
 `;
 
-export const TechList = styled.ul``;
+export const TechList = styled.ul`
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+`;
 
-export const TechListItem = styled.li``;
+export const TechListItem = styled.li`
+  margin: 3px;
+  display: inline-block;
+  padding: 5px;
+`;
