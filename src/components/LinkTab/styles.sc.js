@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const linkTab = styled.a`
   background: white;
+  color: black;
   height: 40px;
   margin: auto;
   width: 137px;
@@ -18,8 +19,6 @@ export const linkTab = styled.a`
   font-family: 'Montreal Bold Italic';
   z-index: 99999;
 `;
-
-export const tabCopy = styled.p``;
 
 export const tabArrow = styled.img`
   src: ${(props) => props.src};

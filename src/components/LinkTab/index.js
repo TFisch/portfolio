@@ -6,10 +6,18 @@ import * as styles from './styles.sc';
 
 const LinkTab = ({ href, text }) => {
   return (
-    <Link to={href} style={{ textDecoration: 'none', color: '#000' }}>
+    <Link
+      to={href}
+      style={{
+        textDecoration: 'none'
+      }}
+    >
       <styles.linkTab bottom="-67px">
-        <styles.tabCopy>{text}</styles.tabCopy>
-        <styles.tabArrow src={rightArrow} />
+        {text}
+        <styles.tabArrow
+          src={rightArrow}
+          alt="an arrow pointing right indicating navigation"
+        />
       </styles.linkTab>
     </Link>
   );

@@ -66,8 +66,16 @@ li {
 }
 
 @media only screen and (min-width: 525px) {
-  p {
-    font-size: 1.5em;
+  p,
+  li {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  p,
+  li {
+    font-size: 1.5rem;
   }
 }
 

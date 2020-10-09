@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
-export const homeView = styled(animated.div)`
+export const homeView = styled(animated.main)`
   height: auto;
   width: 100vw;
   overflow: scroll;
